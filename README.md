@@ -111,6 +111,7 @@ A clean, interactive frontend built with Flask and Bootstrap.
 7. Use the controls on the web app page to switch playlist, adjust Volume Up/Down, or play Top Hits.
 
 ## Project Structure
+```
 MOOD_MUSIC_PLAYER/
 ├── static/
 │   ├── captured_image.jpg       # Stores the last captured image
@@ -122,6 +123,7 @@ MOOD_MUSIC_PLAYER/
 │   └── welcome.html             # The main landing page
 ├── main.py                      # Main Flask application logic
 └── README.md
+```
 
 ## Troubleshooting
 - If the camera feed doesn't appear: Make sure you have granted camera permissions to your browser for 127.0.0.1:5000. Reloading the page might help.
