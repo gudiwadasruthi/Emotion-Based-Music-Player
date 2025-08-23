@@ -1,0 +1,335 @@
+/* General Styles */
+body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/black-linen.png');
+    opacity: 0.1;
+    z-index: -1;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 0;
+    border-bottom: 2px solid #6a0dad;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    color: #e94560;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header h1 i {
+    margin-right: 10px;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 0;
+    border-top: 2px solid #6a0dad;
+    text-align: center;
+    color: #a0a0a0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Card */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #6a0dad;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    text-align: center;
+    color: #e0e0e0;
+    transition: transform 0.3s ease;
+    max-width: 600px; /* Default max-width for most pages */
+    width: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Specific max-width for welcome page */
+main:has(h2:where(:contains("Welcome to Your Music Journey"))) .card {
+    max-width: 400px; /* Reduced width for welcome page */
+}
+
+.card h2 {
+    color: #e94560;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.card h2 i {
+    margin-right: 8px;
+}
+
+.card p {
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+}
+
+.card p i {
+    margin-right: 8px;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Video and Image Styles */
+.video-container {
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.camera-feed {
+    max-width: 400px; /* Reduced size to avoid scrolling */
+    width: 100%;
+    border: 2px solid #6a0dad;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+.captured-image {
+    max-width: 300px;
+    border: 2px solid #e94560;
+    border-radius: 10px;
+    margin: 1rem 0;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Error Text */
+.error-text {
+    color: #e94560;
+    font-size: 1.1em;
+    margin-bottom: 1rem;
+}
+
+/* Button Styles */
+.btn-custom {
+    background: linear-gradient(45deg, #6a0dad, #e94560);
+    border: none;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(106, 13, 173, 0.4);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-custom:hover {
+    background: linear-gradient(45deg, #e94560, #6a0dad);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(106, 13, 173, 0.6);
+}
+
+.btn-custom i {
+    margin-right: 8px;
+}
+
+.btn-secondary {
+    background: #444;
+    border: none;
+    color: #e0e0e0;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-secondary:hover {
+    background: #666;
+    transform: scale(1.05);
+}
+
+.btn-secondary i {
+    margin-right: 8px;
+}
+
+/* Action Buttons (for capture.html) */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Language Buttons (for select_language.html) */
+.language-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Playback Controls (for playback.html) */
+.playback-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.playback-controls .btn {
+    min-width: 130px;
+}
+
+/* Messages */
+.message {
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message i {
+    margin-right: 8px;
+}
+
+.message.success {
+    background: #28a745;
+    color: #ffffff;
+}
+
+.message.error {
+    background: #dc3545;
+    color: #ffffff;
+}
+
+.message.warning {
+    background: #ffc107;
+    color: #1a2a44;
+}
+
+.message.info {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+/* Waveform Background */
+.waveform {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('https://www.transparenttextures.com/patterns/wave.png');
+    opacity: 0.2;
+    animation: wave 10s linear infinite;
+    z-index: -1;
+}
+
+@keyframes wave {
+    0% { background-position: 0 0; }
+    100% { background-position: 1000px 0; }
+}
+
+/* Floating Music Notes Animation */
+.music-note {
+    position: absolute;
+    font-size: 2rem;
+    color: #e94560;
+    opacity: 0.3;
+    animation: float 5s infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); opacity: 0.3; }
+    50% { transform: translateY(-20px); opacity: 0.5; }
+    100% { transform: translateY(0); opacity: 0.3; }
+}
+
+.note-1 { top: 10%; left: 5%; animation-delay: 0s; }
+.note-2 { top: 20%; right: 10%; animation-delay: 1s; }
+.note-3 { bottom: 30%; left: 15%; animation-delay: 2s; }
+.note-4 { bottom: 20%; right: 20%; animation-delay: 3s; }
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .card h2 {
+        font-size: 1.5em;
+    }
+
+    .card {
+        padding: 1.5rem;
+        max-width: 350px; /* Adjusted for smaller screens */
+    }
+
+    main:has(h2:where(:contains("Welcome to Your Music Journey"))) .card {
+        max-width: 300px; /* Reduced width for welcome page on smaller screens */
+    }
+
+    .btn-custom, .btn-secondary {
+        padding: 0.6rem 1.2rem;
+        font-size: 1em;
+    }
+
+    .playback-controls .btn {
+        min-width: 110px;
+    }
+
+    .captured-image {
+        max-width: 200px;
+    }
+
+    .camera-feed {
+        max-width: 300px; /* Further reduced for smaller screens */
+    }
+}

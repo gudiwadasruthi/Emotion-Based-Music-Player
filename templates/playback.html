@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Music Based on Your Mood</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Floating Music Notes -->
+    <i class="fas fa-music music-note note-1"></i>
+    <i class="fas fa-music music-note note-2"></i>
+    <i class="fas fa-music music-note note-3"></i>
+    <i class="fas fa-music music-note note-4"></i>
+
+    <!-- Waveform Background -->
+    <div class="waveform"></div>
+
+    <!-- Header -->
+    <header class="text-center">
+        <h1><i class="fas fa-play-circle me-2"></i> Play Music Based on Your Mood</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="card fade-in">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="message {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <h2><i class="fas fa-smile me-2"></i> Your Mood: {{ mood | capitalize }}</h2>
+            {% if image_url %}
+                <img src="{{ image_url }}" alt="Captured Image" class="captured-image">
+            {% endif %}
+            {% if playing %}
+                <p><i class="fas fa-music me-2"></i> Currently Playing: {{ current_track }}</p>
+                <div class="playback-controls">
+                    <form method="POST" action="{{ url_for('control', image_url=image_url) }}">
+                        <button type="submit" name="action" value="next" class="btn btn-custom"><i class="fas fa-forward me-2"></i>switch playlist</button>
+                    </form>
+                    <form method="POST" action="{{ url_for('control', image_url=image_url) }}">
+                        <button type="submit" name="action" value="volume_up" class="btn btn-custom"><i class="fas fa-volume-up me-2"></i> Volume Up</button>
+                    </form>
+                    <form method="POST" action="{{ url_for('control', image_url=image_url) }}">
+                        <button type="submit" name="action" value="volume_down" class="btn btn-custom"><i class="fas fa-volume-down me-2"></i> Volume Down</button>
+                    </form>
+                    <form method="POST" action="{{ url_for('control', image_url=image_url) }}">
+                        <button type="submit" name="action" value="top" class="btn btn-custom"><i class="fas fa-star me-2"></i> Top Hits</button>
+                    </form>
+                    <form method="POST" action="{{ url_for('control', image_url=image_url) }}">
+                        <button type="submit" name="action" value="2000s" class="btn btn-custom"><i class="fas fa-calendar-alt me-2"></i> 2000s Music</button>
+                    </form>
+                    <form method="POST" action="{{ url_for('control', image_url=image_url) }}">
+                        <button type="submit" name="action" value="telugu" class="btn btn-custom"><i class="fas fa-language me-2"></i> Telugu Music</button>
+                    </form>
+                </div>
+            {% else %}
+                <p><i class="fas fa-music me-2"></i> No music is currently playing.</p>
+                <div class="playback-controls">
+                    <form method="POST" action="{{ url_for('control', image_url=image_url) }}">
+                        <button type="submit" name="action" value="play" class="btn btn-custom"><i class="fas fa-play me-2"></i> Play</button>
+                    </form>
+                    <a href="{{ url_for('welcome') }}" class="btn btn-secondary"><i class="fas fa-times me-2"></i> Cancel</a>
+                </div>
+            {% endif %}
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Mood-Based Music Player. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
