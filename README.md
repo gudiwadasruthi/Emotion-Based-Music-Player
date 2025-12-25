@@ -15,13 +15,13 @@ An AI-powered web app that analyzes your facial expression, detects your mood, a
 ---
 
 ## 📑 Table of Contents
-- [⚡ Quick Start](#quick-start)
-- [💡 About the Project](#about-the-project)
-- [🎥 Demo & Screenshots](#demo--screenshots)
-- [✨ Features](#features)
-- [🛠 Tech Stack](#tech-stack)
-- [🧠 System Architecture](#system-architecture)
-- [📦 Installation](#installation)
+- [⚡ Quick Start](#Quick-Start)
+- [💡 About the Project](#About-the-Project)
+- [🎥 Demo & Screenshots](#Demo--Screenshots)
+- [✨ Features](#Features)
+- [🛠 Tech Stack](#Tech-Stack)
+- [🧠 System Architecture](#System-Architecture)
+- [📦 Installation](#Installation)
 - [Usage](#usage)
 - [📊 Results](#results)
 - [Project Structure](#project-structure)
