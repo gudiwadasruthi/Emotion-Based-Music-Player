@@ -19,14 +19,14 @@ An AI-powered web app that analyzes your facial expression, detects your mood, a
 - [💡 About the Project](#about-the-project)
 - [🎥 Demo & Screenshots](#demo--screenshots)
 - [✨ Features](#features)
-- [� Tech Stack](#-tech-stack)
+- [🛠 Tech Stack](#tech-stack)
 - [🧠 System Architecture](#system-architecture)
-- [� Installation](#installation)
+- [📦 Installation](#installation)
 - [Usage](#usage)
-- [� Results](#results)
+- [📊 Results](#results)
 - [Project Structure](#project-structure)
 - [Troubleshooting](#troubleshooting)
-- [� Future Enhancements](#future-enhancements)
+- [🚀 Future Enhancements](#future-enhancements)
 - [🤝 Contributing](#contributing)
 - [🙏 Acknowledgements](#acknowledgements)
 - [📜 License](#license)
@@ -60,39 +60,17 @@ A clean, interactive frontend built with Flask and Bootstrap.
 
 ## 🎥 Demo & Screenshots
 
-Below are side-by-side GIF previews and static screenshots for each key view.
+### 🔹 Welcome Page
+![Welcome Page](assets/screenshots/welcome.png)
 
-<table>
-  <thead>
-    <tr>
-      <th align="left">View</th>
-      <th align="left">GIF Preview</th>
-      <th align="left">Screenshot</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Welcome Page</b></td>
-      <td><img src="assets/gifs/welcome.gif" alt="Welcome GIF" width="100%"></td>
-      <td><img src="assets/screenshots/welcome.png" alt="Welcome Screenshot" width="100%"></td>
-    </tr>
-    <tr>
-      <td><b>Live Camera Capture</b></td>
-      <td><img src="assets/gifs/capture.gif" alt="Camera Capture GIF" width="100%"></td>
-      <td><img src="assets/screenshots/capture.png" alt="Camera Capture Screenshot" width="100%"></td>
-    </tr>
-    <tr>
-      <td><b>Mood Detection Result</b></td>
-      <td><img src="assets/gifs/result.gif" alt="Mood Result GIF" width="100%"></td>
-      <td><img src="assets/screenshots/result.png" alt="Mood Result Screenshot" width="100%"></td>
-    </tr>
-    <tr>
-      <td><b>Music Playback</b></td>
-      <td><img src="assets/gifs/playback.gif" alt="Playback GIF" width="100%"></td>
-      <td><img src="assets/screenshots/playback.png" alt="Playback Screenshot" width="100%"></td>
-    </tr>
-  </tbody>
-  </table>
+### 🔹 Live Camera Capture
+![Camera Capture](assets/screenshots/capture.png)
+
+### 🔹 Mood Detection Result
+![Mood Result](assets/screenshots/result.png)
+
+### 🔹 Music Playback
+![Playback](assets/screenshots/playback.png)
 
 <p align="right">(<a href="#emotion-based-music-player">⬆ Back to top</a>)</p>
 
@@ -254,7 +232,7 @@ This project wouldn’t be possible without these amazing tools and libraries:
 - [Flask](https://flask.palletsprojects.com/) – Backend framework  
 - [DeepFace](https://github.com/serengil/deepface) – Facial analysis and emotion detection 
 - [OpenCV](https://opencv.org/) – Webcam and computer vision tasks 
-- [Selenium](https://www.selenium.dev/.) – Web automation 
+- [Selenium](https://www.selenium.dev/) – Web automation 
 - [Bootstrap](https://getbootstrap.com/) – Responsive frontend framework 
 - [Font Awesome](https://fontawesome.com/) – Icons  
 
