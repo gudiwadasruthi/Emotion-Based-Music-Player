@@ -60,19 +60,42 @@ A clean, interactive frontend built with Flask and Bootstrap.
 
 ## 🎥 Demo & Screenshots
 
-### 🔹 Welcome Page
-![Welcome Page](assets/screenshots/welcome.png)
+### 🏠 Welcome Screen – Start Your Music Journey
+<p align="center">
+  <img src="assets/screenshots/welcome.png" width="85%">
+</p>
+<p align="center"><i>Entry point of the application with a simple and engaging call to action</i></p>
 
-### 🔹 Live Camera Capture
-![Camera Capture](assets/screenshots/capture.png)
+---
 
-### 🔹 Mood Detection Result
-![Mood Result](assets/screenshots/result.png)
+### 📸 Live Camera Capture – Detect Your Mood
+<p align="center">
+  <img src="assets/screenshots/capture.png" width="85%">
+</p>
+<p align="center"><i>Real-time webcam preview used for capturing facial expressions</i></p>
 
-### 🔹 Music Playback
-![Playback](assets/screenshots/playback.png)
+---
 
-<p align="right">(<a href="#emotion-based-music-player">⬆ Back to top</a>)</p>
+### 😊 Mood Detection Result – Emotion Identified
+<p align="center">
+  <img src="assets/screenshots/result.png" width="85%">
+</p>
+<p align="center"><i>Detected emotion displayed along with language selection options</i></p>
+
+---
+
+### 🎶 Music Playback – Mood-Based Recommendations
+<p align="center">
+  <img src="assets/screenshots/playback.png" width="85%">
+</p>
+<p align="center"><i>Personalized music playback based on detected mood</i></p>
+
+---
+
+<p align="right">
+  (<a href="#emotion-based-music-player">⬆ Back to top</a>)
+</p>
+
 
 ## ✨ Features
 
